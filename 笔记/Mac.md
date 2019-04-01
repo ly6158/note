@@ -18,6 +18,19 @@ $ defaults write com.apple.dock springboard-rows -int 7
 $ defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 
+##### Mac安装语法高亮插件(zsh-syntax-highlighting)
+- homebrew方式
+```bash
+$ brew install zsh-syntax-highlighting
+
+# 在.zshrc最后添加
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# 保存退出
+
+$ source .zshrc
+```
+
+
 
 ### 常见问题 & 解决方案
 
