@@ -35,3 +35,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 ```
+
+- Application XXX has not been registered
+> 设置项目名称在AppDelegate.m和index.ios.js中不一致，或者在主业务逻辑页面中的名称不一致
