@@ -66,6 +66,51 @@ $ vim ss.json
 # 保存退出 按esc 输入:wq
 ```
 
+### 安装V2ray
+
+```bash
+# vim(编辑器)  wget(下载器)
+$ yum install vim wget -y
+
+# 下载安装脚本
+$ wget https://install.direct/go.sh
+
+# 执行脚本
+$ bash ./go.sh
+
+# 编辑配置文件
+$ vim /etc/v2ray/config.json
+
+# 启用 v2ray
+$ systemctl enable v2ray
+
+# 启动 v2ray
+$ systemctl start v2ray
+
+# 关闭 v2ray
+$ systemctl stop v2ray
+```
+
+#### 支持shadowsocks配置 
+> 添加如下配置文件
+
+```json
+{
+"inboundDetour": [
+   {
+     "protocol": "shadowsocks",
+     "port": 8000,
+     "settings": {
+      "method": "aes-256-cfb",
+      "password": "密码",
+      "udp": false
+     }
+    }
+  ]
+}
+
+```
+
 ### 常用命令
 ```bash
 # 如果有防火墙,开启端口
