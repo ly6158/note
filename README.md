@@ -144,3 +144,12 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 ```
+
+
+### 安卓root卸载系统自带软件
+```bash
+# 获取root权限
+su
+# 卸载软件
+pm uninstall --user 0 com.miui.systemAdSolution
+```

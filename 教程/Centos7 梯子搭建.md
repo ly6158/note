@@ -68,6 +68,8 @@ $ vim ss.json
 
 ### 安装V2ray
 
+> https://github.com/Tualua/v2ray-docs/wiki/v2ray:-Server-install-(CentOS-7)
+
 ```bash
 # vim(编辑器)  wget(下载器)
 $ yum install vim wget -y
