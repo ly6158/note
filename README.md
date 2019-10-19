@@ -66,7 +66,11 @@ $ chmod +x /etc/rc.d/rc.local
 
 ```bash
 # win系统默认本地代理端口为1080 mac为1086
-$ git config --global http.proxy 'socks5://127.0.0.1:1086'
+git config --global http.proxy 'socks5://127.0.0.1:1086'
+git config --global https.proxy 'socks5://127.0.0.1:1086'
+# 清除配置 取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 ```
 
 #### git中文文件名 乱码
@@ -148,8 +152,13 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 
 ### 安卓root卸载系统自带软件
 ```bash
+# 下载安卓命令行工具
+[安卓命令行.apk](./file/AndroidTerm.apk)
 # 获取root权限
 su
 # 卸载软件
 pm uninstall --user 0 com.miui.systemAdSolution
+
+# adb命令行
+adb shell pm uninstall --user 0 com.xiaomi.gamecenter
 ```
