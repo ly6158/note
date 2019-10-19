@@ -151,14 +151,19 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 
 
 ### 安卓root卸载系统自带软件
+
+#### 安卓手机操作
+[下载安卓命令行工具](./file/AndroidTerm.apk)
+
 ```bash
-# 下载安卓命令行工具
-[安卓命令行.apk](./file/AndroidTerm.apk)
 # 获取root权限
 su
 # 卸载软件
 pm uninstall --user 0 com.miui.systemAdSolution
 
+```
+#### 电脑操作
+```bash
 # adb命令行
 adb shell pm uninstall --user 0 com.xiaomi.gamecenter
 ```
