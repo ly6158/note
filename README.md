@@ -104,6 +104,29 @@ $ defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 $ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
 ```
 > 该方式只是保证命令行命令暂时能用
+>
+#### 跟新 macOS catalina出现 "已损坏,无法打开..." 解决方案
+> [原文链接](https://www.macdu.org/24377.html)
+>
+- 1.打开终端 
+```bash
+# xxxx.app为你的应用包名
+sudo xattr -r -d com.apple.quarantine /Applications/xxxx.app
+```
+
+- 2.如第一种方案不可行
+    - 重启电脑
+    - 黑屏时 按住 command+R 进入恢复模式
+    - 打开终端关闭SIP
+    - 建议用完之后打开SIP
+    
+```bash
+# 关闭SIP ：
+csrutil disable
+# 打开SIP：
+csrutil enable
+```
+
 
 ---
 
