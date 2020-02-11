@@ -6,6 +6,7 @@
 ```bash
 # SSH记住登录凭证
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@ip
+> 如果没有id_rsa.pub 在终端输入ssh-keygen
 
 # SSH清除连接认证
 $ ssh-keygen -R 118.24.158.145
