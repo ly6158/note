@@ -105,10 +105,10 @@ $ defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 $ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
 ```
 > 该方式只是保证命令行命令暂时能用
->
-#### 跟新 macOS catalina出现 "已损坏,无法打开..." 解决方案
+
+#### 更新 macOS catalina出现 "已损坏,无法打开..." 解决方案
 > [原文链接](https://www.macdu.org/24377.html)
->
+
 - 1.打开终端 
 ```bash
 # xxxx.app为你的应用包名
@@ -153,6 +153,14 @@ csrutil enable
 ```
 
 ```bash
+# Maven环境变量配置
+export MAVEN_HOME=/Users/liuyang/workspace/packages/apache-maven-3.6.3
+export PATH=PATH:MAVEN_HOME/bin
+```
+
+
+
+```bash
 # 安装Oracle驱动包
 $ mvn install:install-file -DgroupId=com.oracle -DartifactId=jdbc8 -Dversion=12.2.0.1 -Dpackaging=jar -Dfile=/Users/liuyang/tools/jar/jdbc8-12.2.0.1.jar
 
@@ -174,20 +182,3 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 ```
 
 
-### 安卓root卸载系统自带软件
-
-#### 安卓手机操作
-[下载安卓命令行工具](./file/AndroidTerm.apk)
-
-```bash
-# 获取root权限
-su
-# 卸载软件
-pm uninstall --user 0 com.miui.systemAdSolution
-
-```
-#### 电脑操作
-```bash
-# adb命令行
-adb shell pm uninstall --user 0 com.xiaomi.gamecenter
-```
