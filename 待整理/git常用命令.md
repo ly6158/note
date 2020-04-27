@@ -139,11 +139,6 @@ $ git diff
 ##### -p (显示每次提交的内容差异)
 >$ git log -p
 
-
-
-
-
-
 > 参考:
 <http://www.ruanyifeng.com/blog/2014/06/git_remote.html>
 <https://git-scm.com/book/zh/v2/>
