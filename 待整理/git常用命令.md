@@ -1,3 +1,27 @@
+### GitHub配置ssh
+##### 1. 查看本地是否有SSH Key
+```bash js
+$ cd ~/.ssh
+$ ll 或者 ls
+# 查看是否有 id_rsa 和 id_rsa.pub 文件
+```
+
+##### 2. 如果没有SSH Key
+```bash
+$ ssh-keygen -t rsa -C "邮箱地址"
+# 执行之后回到步骤一检验是否成功
+```
+
+##### 3. 复制SSH Key
+```bash
+$ cat ~/.ssh/id_rsa.pub
+```
+
+
+
+
+
+
 ### git clone --- 项目克隆(拉取远端项目)
 + $ git clone <需要拉取的项目路劲url> <本地目录名>
 > 示例:$ git clone http://app.datasoftware.com.cn:3000/yunshi/dataview.git dataview
