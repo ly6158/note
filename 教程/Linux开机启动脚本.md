@@ -1,7 +1,7 @@
 ### 先决条件
 ```bash
 echo "给启动脚本授予权限"
-chmod +x /etc/rc.d/rc-local
+chmod +x /etc/rc.d/rc.local
 echo "启用脚本"
 systemctl enable rc-local
 ```
@@ -30,7 +30,7 @@ vim /etc/rc.d/rc-local文件
 ```bash
 # 如果想以某个非root用户运行脚本，可以使用如下命令
 # su - 用户名 -c 执行文件路径
-# 示例: su - user -c /home/user/run.sh
+# 示例: su - git -c /home/git/startup.sh
 ```
 
 ### 脚本示例

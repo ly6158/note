@@ -25,7 +25,7 @@ $ tail -f catalina.out
 #### Linux防火墙相关
 ```bash
 # 防火墙添加端口 以端口3000为例
-$ sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+$ sudo firewall-cmd --zone=public --add-port=8585/tcp --permanent
 
 
 # 防火墙配置文件
@@ -128,6 +128,15 @@ csrutil disable
 csrutil enable
 ```
 
+```bash
+# 强制使用核显
+sudo pmset -a GPUSwitch 0
+# 强制使用独显
+sudo pmset -a GPUSwitch 1
+# 自动切换显卡
+sudo pmset -a GPUSwitch 2
+```
+
 
 ---
 
@@ -155,7 +164,7 @@ csrutil enable
 ```bash
 # Maven环境变量配置
 export MAVEN_HOME=/Users/liuyang/workspace/packages/apache-maven-3.6.3
-export PATH=PATH:MAVEN_HOME/bin
+export PATH=$PATH:$MAVEN_HOME/bin
 ```
 
 
