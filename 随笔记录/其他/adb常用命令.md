@@ -1,9 +1,3 @@
-### 下载 && 安装 Android Studio
-[官网地址 & 下载完双击安装](https://developer.android.google.cn/studio/)
-
-### 环境配置(下载 SDK & NDK)
-> Configure --> SDK Manager
-
 ### 手机端卸载预装软件
 [安卓手机命令行工具](../../文件分享/AndroidTerm.apk)
 ```bash
