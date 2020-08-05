@@ -15,8 +15,6 @@ const assignment = obj => {
         }
     });
 };
-
-
 // 正确写法
 const assignment = obj => {
     arr.forEach(f => {
