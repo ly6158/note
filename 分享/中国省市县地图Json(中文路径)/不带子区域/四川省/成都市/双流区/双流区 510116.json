@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Error>
-  <Code>NoSuchKey</Code>
-  <Message>The specified key does not exist.</Message>
-  <RequestId>5D01AC1F9D2B0C706930A2AD</RequestId>
-  <HostId>datavmap-public.oss-cn-hangzhou.aliyuncs.com</HostId>
-  <Key>areas/bound/510116.json</Key>
-</Error>
