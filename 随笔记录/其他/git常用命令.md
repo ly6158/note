@@ -1,7 +1,7 @@
 ### GitHub配置SSH
 ```bash
 # 生成秘钥文件 (如果没有)
-ssh-keygen -t rsa -C "邮箱地址"
+ssh-keygen -t rsa -C "584357539@qq.com"
 # 查看秘钥文件
 cat ~/.ssh/id_rsa.pub
 # github.com --> 右上角头像 --> Settings --> SSH and GPG keys --> New SSH key
