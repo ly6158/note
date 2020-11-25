@@ -11,7 +11,7 @@ yum install wget gcc gcc-c++ autoconf automake zlib zlib-devel pcre pcre-devel -
 # 软件包下载
 wget https://nginx.org/download/nginx-1.14.0.tar.gz
 # 解压
-tar -zxvf openssl-1.1.1-pre4.tar.gz
+tar -zxvf nginx-1.14.0.tar.gz
 # 进入解压目录
 cd nginx-1.14.0
 # 编译
