@@ -2,7 +2,7 @@
 [Nginx官网](https://nginx.org/en/download.html)
 
 ### 如需HTTPS,请先安装OpenSSL
-[OpenSSL安装教程](./OpenSSL.md)
+[OpenSSL安装教程](CentOS安装OpenSSL.md)
 
 ### 安装教程
 ```bash
