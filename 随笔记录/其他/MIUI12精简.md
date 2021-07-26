@@ -25,14 +25,40 @@ adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service
 adb shell pm uninstall --user 0 com.android.bookmarkprovider
 # 内容中心
 adb shell pm uninstall --user 0 com.miui.newhome
+# 服务与反馈
+adb shell pm uninstall --user 0 com.miui.miservice
+# 生活黄页
+adb shell pm uninstall --user 0 com.miui.yellowpage
+# 小米钱包
+adb shell pm uninstall --user 0 com.mipay.wallet
+# 用户反馈
+adb shell pm uninstall --user 0 com.miui.bugreport
+# 传送门
+adb shell pm uninstall --user 0 com.miui.contentextension
+# 小米闻声
+adb shell pm uninstall --user 0 com.miui.accessibility
+# 智能助理
+adb shell pm uninstall --user 0 com.miui.personalassistant
+# AI虚拟助手
+adb shell pm uninstall --user 0 com.xiaomi.aiasst.service
+# 小米广告分析
+adb shell pm uninstall --user 0 com.miui.analytics
+# 小米悬浮球
+adb shell pm uninstall --user 0 com.miui.touchassistant
+# 桌面搜索框
+adb shell pm uninstall --user 0 com.android.quicksearchbox
+
+# 相册
+adb shell pm uninstall --user 0 com.android.wallpaper
 # 小米视频
 adb shell pm uninstall --user 0 com.miui.video
+
 # 未知 (删除未出现问题)
 adb shell pm uninstall --user 0 com.miui.xman
 adb shell pm uninstall --user 0 com.miui.yman
 
 # 软件名称后续整理 (删除未出现问题)
-adb shell pm uninstall --user 0 com.miui.analytics
+
 adb shell pm uninstall --user 0 com.miui.daemon
 adb shell pm uninstall --user 0 com.android.dreams.basic
 adb shell pm uninstall --user 0 com.miui.miservice
@@ -58,18 +84,13 @@ adb shell pm uninstall --user 0 com.xiaomi.xmsf
 adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
 adb shell pm uninstall --user 0 com.miui.contentextension
 adb shell pm uninstall --user 0 com.miui.cloudbackup
-adb shell pm uninstall --user 0 com.miui.personalassistant
 adb shell pm uninstall --user 0 com.android.calllogbackup
-adb shell pm uninstall --user 0 com.miui.touchassistant
-adb shell pm uninstall --user 0 com.android.wallpaper
-adb shell pm uninstall --user 0 com.mipay.wallet
+
 adb shell pm uninstall --user 0 com.miui.gallery
 ```
 
 ### 禁用列表
 ```bash
-# 桌面搜索框
-adb shell pm disable-user com.android.quicksearchbox
 # 主题管理
 adb shell pm disable-user com.android.thememanager
 
@@ -77,3 +98,12 @@ adb shell pm disable-user com.android.thememanager
 adb shell pm disable-user com.miui.aod
 adb shell pm disable-user com.android.keychain
 ```
+### 不可以删除列表(会卡米)
+```bash
+# 系统服务组件
+adb shell pm uninstall --user 0 com.miui.securityadd
+# 应用包管理组件
+adb shell pm uninstall --user 0 com.miui.packageinstaller
+```
+
+
