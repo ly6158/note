@@ -1,40 +1,22 @@
 ### 1. 下载安装脚本
 > https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 
-### 2. 修改脚本
+### 2. 代理打开全局模式
+
+### 3. 替换源
 ```bash
-默认
-#BREW_REPO = "https://github.com/Homebrew/brew"
-修改为
-BREW_REPO = "git://mirrors.ustc.edu.cn/brew.git"
-```
-
-### 3. 执行安装
-> 卡在 Cloning into ‘/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core’…时取消
-
-
-### 4. 单独下载core
-```bash
-git clone git://mirrors.ustc.edu.cn/homebrew-core.git/ /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core --depth=1
-```
-
-### 5. 替换源
-
-```bash
-# 替换homebrew默认源
+# 替换brew.git:
 cd "$(brew --repo)"
-git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
-
-# 替换homebrew-core源
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+# 替换homebrew-core.git:
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
-```
-
-### 6. 更新测试
-```bash
+git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
+# 应用生效
 brew update
+# 替换homebrew-bottles:
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
 ```
-
 
 ### 常用命令
 ```bash
@@ -66,7 +48,12 @@ brew doctor
 brew -h
 ```
 
+### 常见问题 & 解决方案
+- 问题： fatal: Could not resolve HEAD to a revision
+    - 解决： https://www.jianshu.com/p/b2de788c3c6d
+
 
 ### 参考链接
 - https://zhuanlan.zhihu.com/p/89941189
 - https://www.jianshu.com/p/c7c7aa34e579
+- https://developer.aliyun.com/mirror/homebrew
