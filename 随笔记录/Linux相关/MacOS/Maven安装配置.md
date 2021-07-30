@@ -1,18 +1,17 @@
 ### 下载直接解压
-```
-# 下载maven包
-wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
-# 配置 conf/setting.xml
-```
+[下载源码包](https://maven.apache.org/download.cgi)
 
+### 配置文件 
+> ./maven-path/conf/setting.xml
 ```xml
-<!-- 修改阿里云镜像 -->
+<!-- 阿里云镜像 -->
 <mirror>
   <id>alimaven</id>
   <name>aliyun maven</name>
   <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
   <mirrorOf>central</mirrorOf>        
 </mirror>
+
 <!-- 修改本地仓库路径 -->
 <localRepository>/.../maven-repository</localRepository>
 ```
