@@ -25,6 +25,13 @@ const longestPalindrome_1 = function (s) {
  * @returns {string}
  */
 const longestPalindrome = function (s) {
+    // 寻找中间位置
+    if(s.length % 2 === 0){
+
+    }else{
+
+    }
+
     for (let i = 0; i < s.length; i++) {
 
     }
