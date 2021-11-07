@@ -1,9 +1,11 @@
 [adb常用命令](../Linux相关/adb常用命令.md)
 
-### MIUI12 精简列表
+### MIUI12.5 精简列表
 ```bash
 # 广告程序
 adb shell pm uninstall --user 0 com.miui.systemAdSolution
+# 小米广告分析
+adb shell pm uninstall --user 0 com.miui.analytics
 # 快应用服务框架
 adb shell pm uninstall --user 0 com.miui.hybrid.accessory
 adb shell pm uninstall --user 0 com.miui.hybrid
@@ -41,52 +43,28 @@ adb shell pm uninstall --user 0 com.miui.accessibility
 adb shell pm uninstall --user 0 com.miui.personalassistant
 # AI虚拟助手
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.service
-# 小米广告分析
-adb shell pm uninstall --user 0 com.miui.analytics
 # 小米悬浮球
 adb shell pm uninstall --user 0 com.miui.touchassistant
 # 桌面搜索框
 adb shell pm uninstall --user 0 com.android.quicksearchbox
+# AI工具箱
+adb shell pm uninstall --user 0 com.xiaomi.aiasst.vision
+# 小米画报
+adb shell pm uninstall --user 0 com.mfashiongallery.emag
 
+```
+
+### 
+```bash
 # 相册
+adb shell pm uninstall --user 0 com.miui.gallery
 adb shell pm uninstall --user 0 com.android.wallpaper
+
+# 小米音乐
+adb shell pm uninstall --user 0 com.miui.player
+
 # 小米视频
 adb shell pm uninstall --user 0 com.miui.video
-
-# 未知 (删除未出现问题)
-adb shell pm uninstall --user 0 com.miui.xman
-adb shell pm uninstall --user 0 com.miui.yman
-
-# 软件名称后续整理 (删除未出现问题)
-
-adb shell pm uninstall --user 0 com.miui.daemon
-adb shell pm uninstall --user 0 com.android.dreams.basic
-adb shell pm uninstall --user 0 com.miui.miservice
-adb shell pm uninstall --user 0 com.android.internal.systemui.navbar.twobutton
-adb shell pm uninstall --user 0 com.android.internal.systemui.navbar.threebutton
-adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.corner
-adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.double
-adb shell pm uninstall --user 0 com.android.internal.display.cutout.emulation.tall
-adb shell pm uninstall --user 0 com.android.theme.icon_pack.rounded.systemui
-adb shell pm uninstall --user 0 com.android.theme.icon_pack.rounded.android
-adb shell pm uninstall --user 0 com.android.theme.icon_pack.rounded.launcher
-adb shell pm uninstall --user 0 com.android.theme.icon_pack.rounded.settings
-adb shell pm uninstall --user 0 com.miui.backup
-adb shell pm uninstall --user 0 com.miui.phrase
-adb shell pm uninstall --user 0 com.android.printspooler
-adb shell pm uninstall --user 0 com.miui.misound
-adb shell pm uninstall --user 0 com.android.managedprovisioning
-adb shell pm uninstall --user 0 com.android.emergency
-adb shell pm uninstall --user 0 com.android.bips
-adb shell pm uninstall --user 0 com.android.traceur
-adb shell pm uninstall --user 0 com.miui.mishare.connectivity
-adb shell pm uninstall --user 0 com.xiaomi.xmsf
-adb shell pm uninstall --user 0 com.xiaomi.mi_connect_service
-adb shell pm uninstall --user 0 com.miui.contentextension
-adb shell pm uninstall --user 0 com.miui.cloudbackup
-adb shell pm uninstall --user 0 com.android.calllogbackup
-
-adb shell pm uninstall --user 0 com.miui.gallery
 ```
 
 ### 禁用列表
@@ -101,9 +79,7 @@ adb shell pm disable-user com.android.keychain
 ### 不可以删除列表(会卡米)
 ```bash
 # 系统服务组件
-adb shell pm uninstall --user 0 com.miui.securityadd
+com.miui.securityadd
 # 应用包管理组件
-adb shell pm uninstall --user 0 com.miui.packageinstaller
+com.miui.packageinstaller
 ```
-
-
