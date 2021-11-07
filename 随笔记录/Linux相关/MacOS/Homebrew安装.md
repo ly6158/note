@@ -1,52 +1,15 @@
-### 1. 下载安装脚本
-> https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+## Mac OS 安装 HomeBrew 
 
-### 2. 代理打开全局模式
+### 1. 有梯子安装
 
-### 3. 替换源
-```bash
-# 替换brew.git:
-cd "$(brew --repo)"
-git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
-# 替换homebrew-core.git:
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
-# 应用生效
-brew update
-# 替换homebrew-bottles:
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zshrc
-source ~/.zshrc
-```
+- 浏览器打开 https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+- 保存为 brew.sh 并替换文件内源地址
+  - HOMEBREW_BREW_DEFAULT_GIT_REMOTE="git://mirrors.ustc.edu.cn/brew.git"
+  - HOMEBREW_CORE_DEFAULT_GIT_REMOTE="git://mirrors.ustc.edu.cn/homebrew-core.git"
+- 授予可执行文件权限 chmod +x brew.sh
+- 执行安装 ./brew.sh
 
-### 常用命令
-```bash
-查看homebrew版本
-brew -v
-
-查看已安装的包
-brew list
-
-安装包
-brew install packageName
-
-卸载包
-brew uninstall packageName
-
-查找包
-brew search packageName
-
-查看包信息
-brew info packageName 
-
-更新homebrew
-brew update
-
-诊断homebrew
-brew doctor
-
-查看帮助信息
-brew -h
-```
+### 2. [无梯子安装](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
 ### 常见问题 & 解决方案
 - 问题： fatal: Could not resolve HEAD to a revision
@@ -55,5 +18,4 @@ brew -h
 
 ### 参考链接
 - https://zhuanlan.zhihu.com/p/89941189
-- https://www.jianshu.com/p/c7c7aa34e579
-- https://developer.aliyun.com/mirror/homebrew
+- https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
