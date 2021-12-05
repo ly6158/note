@@ -51,18 +51,31 @@ adb shell pm uninstall --user 0 com.android.quicksearchbox
 adb shell pm uninstall --user 0 com.xiaomi.aiasst.vision
 # 小米画报
 adb shell pm uninstall --user 0 com.mfashiongallery.emag
-
-```
-
-### 
-```bash
+# 小米商城系统组件
+adb shell pm uninstall --user 0 com.xiaomi.ab
+# 常用语
+adb shell pm uninstall --user 0 com.miui.phrase
+# 打印处理服务
+adb shell pm uninstall --user 0 com.android.printspooler
+# 系统跟踪
+adb shell pm uninstall --user 0 com.android.traceur
+# 运动计步
+adb shell pm uninstall --user 0 com.xiaomi.joyose
+# 用户信息收集
+adb shell pm uninstall --user 0 com.miui.daemon
+# 游戏高能时刻
+adb shell pm uninstall --user 0 com.xiaomi.migameservice
+# 系统打印服务
+adb shell pm uninstall --user 0 com.android.bips
+# 游戏网络加速
+adb shell pm uninstall --user 0 com.miui.vpnsdkmanager
+# 日历存储
+adb shell pm uninstall --user 0 com.android.providers.calendar
 # 相册
 adb shell pm uninstall --user 0 com.miui.gallery
 adb shell pm uninstall --user 0 com.android.wallpaper
-
 # 小米音乐
 adb shell pm uninstall --user 0 com.miui.player
-
 # 小米视频
 adb shell pm uninstall --user 0 com.miui.video
 ```
@@ -71,13 +84,17 @@ adb shell pm uninstall --user 0 com.miui.video
 ```bash
 # 主题管理
 adb shell pm disable-user com.android.thememanager
-
-# 软件名称后续整理
+# 万象息屏
 adb shell pm disable-user com.miui.aod
+# 秘钥链
 adb shell pm disable-user com.android.keychain
+# 耗电检测
+adb shell pm disable-user com.xiaomi.powerchecker
 ```
-### 不可以删除列表(会卡米)
+### 不可以删除列表
 ```bash
+# 手机管家
+com.miui.securitycenter
 # 系统服务组件
 com.miui.securityadd
 # 应用包管理组件
