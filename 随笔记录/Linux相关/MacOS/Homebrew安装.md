@@ -9,6 +9,8 @@
 - 授予可执行文件权限 chmod +x brew.sh
 - 执行安装 ./brew.sh
 
+### 切换镜像源 [淘宝源](https://developer.aliyun.com/mirror/homebrew)
+
 ### 2. [无梯子安装](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
 ### 常见问题 & 解决方案
