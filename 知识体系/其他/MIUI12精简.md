@@ -1,4 +1,4 @@
-[adb常用命令](../Linux相关/adb常用命令.md)
+[adb常用命令](../环境搭建/MacOS ADB常用命令.md)
 
 ### MIUI12.5 精简列表
 ```bash

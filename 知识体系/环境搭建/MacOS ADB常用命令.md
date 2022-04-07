@@ -1,5 +1,8 @@
 ### 手机端卸载预装软件
-[安卓手机命令行工具](../../文件分享/AndroidTerm.apk)
+
+- 安卓手机命令行工具
+> 推荐AndroidTerm.apk
+
 ```bash
 # 获取root权限 (如果有)
 su
