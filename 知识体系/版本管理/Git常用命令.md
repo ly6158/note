@@ -1,4 +1,5 @@
-### GitHub 配置SSH
+### GitHub 配置 SSH
+
 ```bash
 # 生成秘钥文件 (如果没有)
 ssh-keygen -t rsa -C "ly6158@qq.com"
@@ -8,6 +9,7 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 ### git 配置代理 (解决网速慢的问题)
+
 ```bash
 # win系统默认本地代理端口为1080 mac为1086
 git config --global http.proxy 'socks5://127.0.0.1:1086'
@@ -18,13 +20,16 @@ git config --global --unset https.proxy
 ```
 
 ### git 中文文件名 乱码
-> git 默认中文文件名是 \xxx\xxx 等八进制形式 
+
+> git 默认中文文件名是 \xxx\xxx 等八进制形式
+
 ```bash
 # 关闭对0x80以上的字符进行quote
 git config core.quotepath false
 ```
 
 ### 常用命令
+
 ```bash
 # 克隆项目(拉取远端项目)
 git clone <需要拉取的项目路劲url> <本地目录名>
@@ -52,6 +57,8 @@ git push <主机名> <本地分支名> : <远端分支名>
 # 查看提交日志
 git log
 ```
+
 ### 参考
-- [阮一峰Git](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
-- [Git手册](https://git-scm.com/book/zh/v2/)
+
+- [阮一峰 Git](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+- [Git 手册](https://git-scm.com/book/zh/v2/)
