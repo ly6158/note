@@ -1,4 +1,7 @@
-### 先行条件
+# CentOS 安装 ShadowSocks
+
+## 先行条件
+
 ```bash
 # 防火墙开启8000端口
 firewall-cmd --zone=public --add-port=8000/tcp --permanent
@@ -8,7 +11,8 @@ firewall-cmd --reload
 yum install python-setuptools vim wget unzip lsof -y
 ```
 
-### 安装shadowsocks命令
+## 安装 shadowsocks 命令
+
 ```bash
 # 安装所需依赖包
 easy_install pip
@@ -20,24 +24,26 @@ mkdir config && cd config/
 touch ss.json
 ```
 
-#### 将下面json写入到ss.json
+## 将下面 json 写入到 ss.json
+
 ```json
 {
-    "server":"服务器ip地址",
-    "server_port":"ss端口",
-    "local_address": "127.0.0.1",
-    "local_port":1080,
-    "password":"ss密码",
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open": false
+  "server": "服务器ip地址",
+  "server_port": "ss端口",
+  "local_address": "127.0.0.1",
+  "local_port": 1080,
+  "password": "ss密码",
+  "timeout": 300,
+  "method": "aes-256-cfb",
+  "fast_open": false
 }
 ```
 
-#### 常用命令
+## 常用命令
+
 ```bash
 # 启动 ssserver
-ssserver -c /root/config/ss.json -d start 
+ssserver -c /root/config/ss.json -d start
 
 # 关闭 ssserver
 ssserver -c /root/config/ss.json -d stop

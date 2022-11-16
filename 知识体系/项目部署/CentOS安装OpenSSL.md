@@ -1,4 +1,4 @@
-## Centos7 OpenSSl 安装教程
+# Centos7 OpenSSl 安装教程
 
 ```bash
 # 依赖安装
@@ -18,9 +18,11 @@ cd openssl-1.1.1-pre4
 make && make install
 ```
 
-### 常见问题&解决方案
+## 常见问题&解决方案
+
 - openssl: error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
-> 由于openssl库的位置不正确造成的。
+  > 由于 openssl 库的位置不正确造成的。
+
 ```bash
 # 添加软链接
 ln -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/libssl.so.1.1

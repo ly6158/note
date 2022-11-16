@@ -1,3 +1,5 @@
+# CentOS 开机启动脚本
+
 ```bash
 # 给系统默认启动脚本授予 可执行 权限
 chmod +x /etc/rc.d/rc.local
@@ -5,10 +7,12 @@ chmod +x /etc/rc.d/rc.local
 systemctl enable rc-local
 ```
 
-### 添加开机启动脚本(root用户)
-- 直接讲需要执行的命令加在/etc/rc.d/rc-local文件即可
+## 添加开机启动脚本(root 用户)
 
-### 添加开机启动脚本(普通用户)
+- 直接讲需要执行的命令加在/etc/rc.d/rc-local 文件即可
+
+## 添加开机启动脚本(普通用户)
+
 ```bash
 # 在当前用户目录下新建脚本文件(例如 startup.sh)
 touch startup.sh
@@ -24,7 +28,7 @@ vim /etc/rc.d/rc-local文件
 # 添加 su - user -c /home/user/run.sh
 ```
 
-### 说明
+## 说明
 
 ```bash
 # 如果想以某个非root用户运行脚本，可以使用如下命令
@@ -32,7 +36,8 @@ vim /etc/rc.d/rc-local文件
 # 示例: su - git -c /home/git/startup.sh
 ```
 
-### 脚本示例
+## 脚本示例
+
 ```bash
 # !/bin/sh
 # chkconfig: 2345 80 90
@@ -40,8 +45,8 @@ vim /etc/rc.d/rc-local文件
 
 # 下面写启动脚本
 
-# 脚本第一行 “#!/bin/sh” 告诉系统使用的shell； 
-# 脚本第二行 “#chkconfig: 2345 80 90” 表示在2/3/4/5运行级别启动，启动序号(S80)，关闭序号(K90)； 
+# 脚本第一行 “#!/bin/sh” 告诉系统使用的shell；
+# 脚本第二行 “#chkconfig: 2345 80 90” 表示在2/3/4/5运行级别启动，启动序号(S80)，关闭序号(K90)；
 # 脚本第三行 表示的是服务的描述信息
 ```
 

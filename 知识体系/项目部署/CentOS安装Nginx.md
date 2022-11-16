@@ -1,10 +1,13 @@
-## Centos7 Nginx 安装教程
-[Nginx官网](https://nginx.org/en/download.html)
+# Centos7 Nginx 安装教程
 
-### 如需HTTPS,请先安装OpenSSL
-[OpenSSL安装教程](CentOS安装OpenSSL.md)
+[Nginx 官网](https://nginx.org/en/download.html)
 
-### 安装教程
+## 如需 HTTPS,请先安装 OpenSSL
+
+[OpenSSL 安装教程](CentOS安装OpenSSL.md)
+
+## 安装教程
+
 ```bash
 # 依赖安装
 yum install wget gcc gcc-c++ autoconf automake zlib zlib-devel pcre pcre-devel -y
@@ -20,7 +23,8 @@ cd nginx-1.14.0
 make && make install
 ```
 
-### nginx常用命令
+## nginx 常用命令
+
 ```bash
 # 启动 (需在安装目录下执行)
 ./sbin/nginx
@@ -30,11 +34,13 @@ pkill -9 nginx
 ./sbin/nginx -s reload
 ```
 
-### 常见问题&解决方案
-- 访问页面出现403错误
-    - 第一种情况: 因为配置文件未配置
+## 常见问题&解决方案
 
-#### 第一种情况解决方案
+- 访问页面出现 403 错误
+  - 第一种情况: 因为配置文件未配置
+
+### 第一种情况解决方案
+
 ```bash
 # 编辑 nginx.conf 文件 (...安装路径/conf/nginx.conf)
 vim nginx.conf
