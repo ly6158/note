@@ -1,6 +1,12 @@
 # Nginx 常用配置
 
 ```nginx
+http{
+  # 限制请求体的大小 默认为1m
+  client_max_body_size 1024m;
+}
+
+
 # 配置服务器组
 upstream server_pools {
     server  127.0.0.1:7201 ;
