@@ -3,17 +3,23 @@
 ```nginx
 # 配置服务器组
 upstream server_pools {
+    server  127.0.0.1:7201 ;
     server  127.0.0.1:7202 ;
 }
 
+location / {
+  #网站主页路径
+  root /nginx/html;
+  index index.html;
+}
 
 # 静态资源代理
-location /web/ {
-    alias /root/projects/web/;
-    autoindex on;
-    include   mime.types;
-    default_type  application/octet-stream;
-    expires 7d;
+location /files/ {
+  alias /files/;
+  autoindex on;
+  include   mime.types;
+  default_type  application/octet-stream;
+  expires 7d;
 }
 
 # 后端服务代理
@@ -23,10 +29,11 @@ location ^~/api/ {
     proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
     proxy_set_header X-NginX-Proxy true;
 
-    proxy_pass http://server_pools/;
+    proxy_pass http://server_pools/api/;
 }
 
 # 301重定向
+# POST请求会转发异常
 server {
     listen 80;
     server_name domain.com;
