@@ -1,10 +1,10 @@
-## package.json文件说明
+# package.json 文件说明
 
 ```json
 {
   // 应用程序/软件包的名称 小于214个字符 且不能包含空格，只能包含小写字母、连字符（-）或下划线（_）
   "name": "project_name",
-  // 作者名称 也支持字符串 
+  // 作者名称 也支持字符串
   "author": {
     "name": "作者名称",
     "email": "",
@@ -27,9 +27,7 @@
   // 是否私有,为true时不允许发布到npm
   "private": true,
   // 应用程序/软件包功能相关的关键字
-  "keywords": [
-    "关键字"
-  ],
+  "keywords": ["关键字"],
   // 指定了应用程序/软件包的仓库地址
   "repository": {
     "type": "git",
@@ -53,18 +51,13 @@
     "npm": ">= 3.0.0"
   },
   // 说明需要支持的浏览器以及版本
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
 ```
 
-### 语义说明
+## 语义说明
 
+## 参考地址
 
-
-### 参考地址
->- http://nodejs.cn/learn/the-package-json-guide
->- http://nodejs.cn/learn/semantic-versioning-using-npm
+> - http://nodejs.cn/learn/the-package-json-guide
+> - http://nodejs.cn/learn/semantic-versioning-using-npm

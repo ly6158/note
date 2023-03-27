@@ -1,6 +1,5 @@
-[adb常用命令](../环境搭建/MacOS ADB常用命令.md)
+# MIUI12.5 精简列表
 
-### MIUI12.5 精简列表
 ```bash
 # 广告程序
 adb shell pm uninstall --user 0 com.miui.systemAdSolution
@@ -80,7 +79,8 @@ adb shell pm uninstall --user 0 com.miui.player
 adb shell pm uninstall --user 0 com.miui.video
 ```
 
-### 禁用列表
+## 禁用列表
+
 ```bash
 # 主题管理
 adb shell pm disable-user com.android.thememanager
@@ -91,7 +91,9 @@ adb shell pm disable-user com.android.keychain
 # 耗电检测
 adb shell pm disable-user com.xiaomi.powerchecker
 ```
-### 不可以删除列表
+
+## 不可以删除列表
+
 ```bash
 # 手机管家
 com.miui.securitycenter
@@ -100,3 +102,5 @@ com.miui.securityadd
 # 应用包管理组件
 com.miui.packageinstaller
 ```
+
+[adb 常用命令](../环境搭建/MacOS ADB 常用命令.md)

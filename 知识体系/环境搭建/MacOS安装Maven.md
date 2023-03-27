@@ -1,15 +1,20 @@
-### 下载直接解压
+# MacOS 安装 Maven
+
+## 下载直接解压
+
 [下载源码包](https://maven.apache.org/download.cgi)
 
-### 配置文件 
+## 配置文件
+
 > ./maven-path/conf/setting.xml
+
 ```xml
 <!-- 阿里云镜像 -->
 <mirror>
   <id>alimaven</id>
   <name>aliyun maven</name>
   <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-  <mirrorOf>central</mirrorOf>        
+  <mirrorOf>central</mirrorOf>
 </mirror>
 
 <!-- 修改本地仓库路径 -->

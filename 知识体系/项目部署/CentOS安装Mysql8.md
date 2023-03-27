@@ -1,4 +1,5 @@
-### 安装 mysql8 & 依赖
+# 安装 mysql8 & 依赖
+
 ```bash
 # 防火墙放行3306端口
 sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent

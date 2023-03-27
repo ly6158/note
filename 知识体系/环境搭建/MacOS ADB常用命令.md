@@ -1,7 +1,7 @@
-### 手机端卸载预装软件
+# 手机端卸载预装软件
 
 - 安卓手机命令行工具
-> 推荐AndroidTerm.apk
+  > 推荐 AndroidTerm.apk
 
 ```bash
 # 获取root权限 (如果有)
@@ -10,7 +10,8 @@ su
 pm uninstall --user 0 软件包名
 ```
 
-### 电脑端卸载手机预装软件
+## 电脑端卸载手机预装软件
+
 ```bash
 # 查看已连接设备
 adb devices
