@@ -17,6 +17,11 @@ location / {
   #网站主页路径
   root /nginx/html;
   index index.html;
+
+  # 解决每次前端部署前端需要清除缓存的问题
+  if ($request_filename ~* ^.*?.(html|htm)$) {
+    add_header Cache-Control "private, no-store, no-cache, must-revalidate, proxy-revalidate";
+  }
 }
 
 # 静态资源代理

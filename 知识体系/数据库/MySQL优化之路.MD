@@ -11,6 +11,8 @@
 
 - date_format(start_time, '%Y-%m-%d %H:%i:%s') as start_time,
 
+- FROM_UNIXTIME( cr.create_time / 1000, '%Y-%m-%d %H:%i:%s' )
+
 ## 状态判断
 
 - ( CASE WHEN now() < a.start_time THEN - 1 WHEN now() > a.end_time THEN 0 ELSE 1 END ) AS status
