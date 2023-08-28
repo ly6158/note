@@ -24,6 +24,11 @@ location / {
   }
 }
 
+# 配置不缓存
+location /your/directory/index.html {
+    expires off;
+}
+
 # 静态资源代理
 location /files/ {
   alias /files/;

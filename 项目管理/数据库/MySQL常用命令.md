@@ -1,4 +1,6 @@
-# MySQL 8.0 常用命令
+# MySQL 常用命令
+
+## MySQL 8.0 用户管理
 
 ```bash
 # 登录
@@ -13,7 +15,7 @@ alter user 'root'@'localhost' identified by '8CB05447AF';
 # 创建用户
 create user 'liuyang'@'%' identified by 'liuyang0';
 
-#
+# 修改密码
 alter user 'liuyang'@'%' identified with mysql_native_password by 'liuyang0';
 
 # 授权
