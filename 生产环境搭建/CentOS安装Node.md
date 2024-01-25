@@ -24,10 +24,13 @@ export PATH=$PATH:'/usr/local/node/bin'
 # 使配置生效
 source .zshrc
 
-# 切换npm源(推荐淘宝源)
+# npm 切换源
 npm config set registry https://mirrors.cloud.tencent.com/npm/
 
 # 安装pm2 yarn
 npm install pm2 yarn -g
+
+# yarn切换源
+yarn config set registry https://registry.npm.taobao.org/
 
 ```

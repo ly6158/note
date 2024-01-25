@@ -1,4 +1,6 @@
-# package.json 文件说明
+# package.json 文件配置说明
+
+## 配置
 
 ```json
 {
@@ -59,5 +61,5 @@
 
 ## 参考地址
 
-> - http://nodejs.cn/learn/the-package-json-guide
-> - http://nodejs.cn/learn/semantic-versioning-using-npm
+- <http://nodejs.cn/learn/the-package-json-guide>
+- <http://nodejs.cn/learn/semantic-versioning-using-npm>

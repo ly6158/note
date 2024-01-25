@@ -21,15 +21,16 @@ sudo pmset -a GPUSwitch 2
 
 ## 常见问题 & 解决方案
 
-1. Mac 环境变量配错导致终端不能用解决方案
+### Mac 环境变量配错导致终端不能用解决方案
 
 ```bash
 # 该方式只是保证命令行命令暂时能用
 export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
 ```
 
-2. 更新 macOS catalina 出现 "已损坏,无法打开..." 解决方案
-   > [原文链接](https://www.macdu.org/24377.html)
+### 更新 macOS catalina 出现 "已损坏,无法打开..." 解决方案
+
+> [原文链接](https://www.macdu.org/24377.html)
 
 - 1.打开终端
 

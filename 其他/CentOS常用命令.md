@@ -5,10 +5,10 @@
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@ip
 
 # SSH清除连接认证
-ssh-keygen -R 118.24.158.145
+ssh-keygen -R <IP>
 
 查看应用进程 (tomcat为例)
-ps -ef |grep tomcat
+ps -ef | grep tomcat
 
 # 作为服务启动 (tomcat为例)
 nohup ./startup.sh > ../logs/catalina.out 2>&1 &
@@ -17,7 +17,7 @@ nohup ./startup.sh > ../logs/catalina.out 2>&1 &
 tail -f catalina.out
 
 # 防火墙添加端口 以端口3000为例
-sudo firewall-cmd --zone=public --add-port=8585/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent
 
 # 防火墙配置文件
 vim /etc/sysconfig/iptables

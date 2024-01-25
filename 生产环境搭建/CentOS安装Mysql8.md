@@ -10,11 +10,14 @@ sudo firewall-cmd --reload
 # 下载mysql repo源
 wget http://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
 
+# 更新GPG密钥
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
 # 安装包
 sudo rpm -ivh mysql80-community-release-el7-3.noarch.rpm
 
 # 使用yum安装mysql
-sudo yum install mysql-server -y
+sudo yum install mysql-server --nogpgcheck -y
 
 # 将mysql设为开机启动项
 systemctl enable mysqld.service

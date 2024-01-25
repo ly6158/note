@@ -10,16 +10,16 @@ mysql -u root -p
 set global validate_password.policy=LOW;
 
 # 修改root改密码
-alter user 'root'@'localhost' identified by '8CB05447AF';
+alter user 'root'@'localhost' identified by 'password';
 
 # 创建用户
-create user 'liuyang'@'%' identified by 'liuyang0';
+create user 'user'@'%' identified by 'password';
 
 # 修改密码
-alter user 'liuyang'@'%' identified with mysql_native_password by 'liuyang0';
+alter user 'user'@'%' identified with mysql_native_password by 'password';
 
 # 授权
-grant all privileges on *.* to 'liuyang'@'%' with grant option;
+grant all privileges on *.* to 'user'@'%' with grant option;
 
 # 刷新权限
 flush privileges;
